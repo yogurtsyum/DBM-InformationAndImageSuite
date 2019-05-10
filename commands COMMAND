@@ -159,5 +159,9 @@
       "name": "End Action Sequence"
     }
   ],
-  "comType": "0"
+  "comType": "0",
+  "_aliases": [
+    "help",
+    "cmds"
+  ]
 }
