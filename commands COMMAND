@@ -15,7 +15,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "<@${tempVars(\"author_id\")}>, \n\nPlease react with what you'd like to view.\nOptions: \n`moderation` - ✨\n`music` - 🎹\n`self-roles` - ⭐\n\nThis prompt will be cancelled in 30 seconds.",
+      "message": "<@${tempVars(\"author_id\")}>, \n\nPlease react with what you'd like to view.\nOptions: \n`moderation` - ✨\n`music` - 🎵\n`self-roles` - ⭐\n\nThis prompt will be cancelled in 30 seconds.",
       "storage": "1",
       "varName2": "msg",
       "iffalse": "0",
@@ -34,7 +34,7 @@
       "storage": "1",
       "varName": "msg",
       "emoji": "4",
-      "varName2": "🎹",
+      "varName2": "🎵",
       "varName3": "",
       "name": "Add Reaction"
     },
@@ -65,7 +65,7 @@
     {
       "storage": "1",
       "varName": "msg",
-      "filter": "reaction.emoji.name === '🎹' && user.id === '${tempVars(\"author_id\")}'",
+      "filter": "reaction.emoji.name === '🎵' && user.id === '${tempVars(\"author_id\")}'",
       "max": "1",
       "time": "30000",
       "maxEmojis": "",
