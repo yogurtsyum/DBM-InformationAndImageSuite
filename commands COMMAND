@@ -65,7 +65,7 @@
     {
       "storage": "1",
       "varName": "msg",
-      "filter": "reaction.emoji.name === '📖' && user.id === '${tempVars(\"author_id\")}'",
+      "filter": "reaction.emoji.name === '🎹' && user.id === '${tempVars(\"author_id\")}'",
       "max": "1",
       "time": "30000",
       "maxEmojis": "",
