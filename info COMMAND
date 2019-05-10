@@ -158,5 +158,9 @@
     {
       "name": "End Action Sequence"
     }
+  ],
+  "_aliases": [
+    "guide",
+    "server-guide"
   ]
 }
