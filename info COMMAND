@@ -1,0 +1,162 @@
+{
+  "name": "info",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "mTOsO",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "author_id",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "<@${tempVars(\"author_id\")}>, \n\nPlease react with what you'd like to view.\nOptions: \n`staff-team` - ✨\n`application` - 📖\n`roles` - ⭐\n\nThis prompt will be cancelled in 30 seconds.",
+      "storage": "1",
+      "varName2": "msg",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "✨",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "📖",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "⭐",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "filter": "reaction.emoji.name === '✨' && user.id === '${tempVars(\"author_id\")}'",
+      "max": "1",
+      "time": "30000",
+      "maxEmojis": "",
+      "maxUsers": "",
+      "iftrue": "2",
+      "iftrueVal": "9",
+      "iffalse": "2",
+      "iffalseVal": "18",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Reaction Call Action"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "filter": "reaction.emoji.name === '📖' && user.id === '${tempVars(\"author_id\")}'",
+      "max": "1",
+      "time": "30000",
+      "maxEmojis": "",
+      "maxUsers": "",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "2",
+      "iffalseVal": "18",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Reaction Call Action"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "filter": "reaction.emoji.name === '⭐' && user.id === '${tempVars(\"author_id\")}'",
+      "max": "1",
+      "time": "30000",
+      "maxEmojis": "",
+      "maxUsers": "",
+      "iftrue": "2",
+      "iftrueVal": "15",
+      "iffalse": "2",
+      "iffalseVal": "18",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Reaction Call Action"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "<@${tempVars(\"author_id\")}>,\n\nThese are our Staff Members: (Placeholder)",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Clear reactions from message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "<@${tempVars(\"author_id\")}>,\n\nThis is our application link:",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Clear reactions from message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "<@${tempVars(\"author_id\")}>,\n\nThese are our roles:\n(Placeholder) - (Placeholder)\n(Placeholder) - (Placeholder)\n(Placeholder) - (Placeholder)",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Clear reactions from message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "<@${tempVars(\"author_id\")}>,\n\nSorry, but you did not respond quick enough.",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Clear reactions from message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
