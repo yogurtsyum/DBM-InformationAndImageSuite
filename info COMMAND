@@ -2,23 +2,15 @@
   "name": "info",
   "permissions": "NONE",
   "restriction": "1",
-  "_id": "mTOsO",
+  "_id": "cGJTH",
   "actions": [
-    {
-      "member": "1",
-      "varName": "",
-      "info": "1",
-      "storage": "1",
-      "varName2": "author_id",
-      "name": "Store Member Info"
-    },
     {
       "channel": "0",
       "varName": "",
-      "message": "<@${tempVars(\"author_id\")}>, \n\nPlease react with what you'd like to view.\nOptions: \n`staff-team` - ✨\n`application` - 📖\n`roles` - ⭐\n\nThis prompt will be cancelled in 30 seconds.",
+      "message": "__Information Prompt__\nPlease react with what tag you want to view.\n*Only showing `information` tags.*\n😄 - test1\n😆 - test2\n😊 - test3\n\nReactions will be checked in 5 seconds...",
       "storage": "1",
       "varName2": "msg",
-      "iffalse": "0",
+      "iffalse": "1",
       "iffalseVal": "",
       "name": "Send Message"
     },
@@ -26,7 +18,7 @@
       "storage": "1",
       "varName": "msg",
       "emoji": "4",
-      "varName2": "✨",
+      "varName2": "😄",
       "varName3": "",
       "name": "Add Reaction"
     },
@@ -34,7 +26,7 @@
       "storage": "1",
       "varName": "msg",
       "emoji": "4",
-      "varName2": "📖",
+      "varName2": "😆",
       "varName3": "",
       "name": "Add Reaction"
     },
@@ -42,70 +34,87 @@
       "storage": "1",
       "varName": "msg",
       "emoji": "4",
-      "varName2": "⭐",
+      "varName2": "😊",
       "varName3": "",
       "name": "Add Reaction"
     },
     {
-      "storage": "1",
+      "message": "1",
       "varName": "msg",
-      "filter": "reaction.emoji.name === '✨' && user.id === '${tempVars(\"author_id\")}'",
-      "max": "1",
-      "time": "30000",
-      "maxEmojis": "",
-      "maxUsers": "",
-      "iftrue": "2",
-      "iftrueVal": "9",
-      "iffalse": "2",
-      "iffalseVal": "18",
-      "storage2": "0",
-      "varName2": "",
-      "name": "Await Reaction Call Action"
+      "info": "1",
+      "find": "😄",
+      "storage": "1",
+      "varName2": "emoji1",
+      "name": "Find Reaction"
     },
     {
-      "storage": "1",
+      "message": "1",
       "varName": "msg",
-      "filter": "reaction.emoji.name === '📖' && user.id === '${tempVars(\"author_id\")}'",
-      "max": "1",
-      "time": "30000",
-      "maxEmojis": "",
-      "maxUsers": "",
-      "iftrue": "2",
-      "iftrueVal": "12",
-      "iffalse": "2",
-      "iffalseVal": "18",
-      "storage2": "0",
-      "varName2": "",
-      "name": "Await Reaction Call Action"
+      "info": "1",
+      "find": "😆",
+      "storage": "1",
+      "varName2": "emoji2",
+      "name": "Find Reaction"
     },
     {
-      "storage": "1",
+      "message": "1",
       "varName": "msg",
-      "filter": "reaction.emoji.name === '⭐' && user.id === '${tempVars(\"author_id\")}'",
-      "max": "1",
-      "time": "30000",
-      "maxEmojis": "",
-      "maxUsers": "",
+      "info": "1",
+      "find": "😊",
+      "storage": "1",
+      "varName2": "emoji3",
+      "name": "Find Reaction"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "reaction": "1",
+      "varName2": "emoji1",
       "iftrue": "2",
       "iftrueVal": "15",
-      "iffalse": "2",
-      "iffalseVal": "18",
-      "storage2": "0",
-      "varName2": "",
-      "name": "Await Reaction Call Action"
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
     },
     {
-      "storage": "1",
-      "varName": "msg",
-      "message": "<@${tempVars(\"author_id\")}>,\n\nThese are our Staff Members: (Placeholder)",
-      "storage2": "1",
-      "varName2": "",
-      "name": "Edit Message"
+      "member": "1",
+      "varName": "",
+      "reaction": "1",
+      "varName2": "emoji2",
+      "iftrue": "2",
+      "iftrueVal": "18",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "reaction": "1",
+      "varName2": "emoji3",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
     },
     {
       "storage": "1",
       "varName": "msg",
       "name": "Clear reactions from message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Please react quicker next time!",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
     },
     {
       "name": "End Action Sequence"
@@ -113,15 +122,15 @@
     {
       "storage": "1",
       "varName": "msg",
-      "message": "<@${tempVars(\"author_id\")}>,\n\nThis is our application link:",
-      "storage2": "1",
-      "varName2": "",
-      "name": "Edit Message"
+      "name": "Clear reactions from message"
     },
     {
       "storage": "1",
       "varName": "msg",
-      "name": "Clear reactions from message"
+      "message": "test1",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
     },
     {
       "name": "End Action Sequence"
@@ -129,15 +138,15 @@
     {
       "storage": "1",
       "varName": "msg",
-      "message": "<@${tempVars(\"author_id\")}>,\n\nThese are our roles:\n(Placeholder) - (Placeholder)\n(Placeholder) - (Placeholder)\n(Placeholder) - (Placeholder)",
-      "storage2": "1",
-      "varName2": "",
-      "name": "Edit Message"
+      "name": "Clear reactions from message"
     },
     {
       "storage": "1",
       "varName": "msg",
-      "name": "Clear reactions from message"
+      "message": "test2",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
     },
     {
       "name": "End Action Sequence"
@@ -145,22 +154,18 @@
     {
       "storage": "1",
       "varName": "msg",
-      "message": "<@${tempVars(\"author_id\")}>,\n\nSorry, but you did not respond quick enough.",
-      "storage2": "1",
-      "varName2": "",
-      "name": "Edit Message"
+      "name": "Clear reactions from message"
     },
     {
       "storage": "1",
       "varName": "msg",
-      "name": "Clear reactions from message"
+      "message": "test3",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
     },
     {
       "name": "End Action Sequence"
     }
-  ],
-  "_aliases": [
-    "guide",
-    "server-guide"
   ]
 }
