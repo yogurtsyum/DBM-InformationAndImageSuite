@@ -1,0 +1,90 @@
+{
+  "name": "setup-statvc",
+  "permissions": "MANAGE_GUILD",
+  "restriction": "1",
+  "_id": "hasXI",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "22",
+      "storage": "1",
+      "varName2": "memtag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "memav",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "Done!",
+      "author": "${tempVars(\"memtag\")}",
+      "color": "abff77",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"memav\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "You have created the channels and they will now update every 30 seconds!\n",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "server-name",
+      "name": "Store Server Info"
+    },
+    {
+      "channelName": "${tempVars(\"server-name\")} Stats!",
+      "position": "1",
+      "storage": "1",
+      "varName": "stat-category",
+      "name": "Create Category Channel"
+    },
+    {
+      "category": "1",
+      "varName": "stat-category",
+      "info": "0",
+      "storage": "1",
+      "varName2": "category-id",
+      "name": "Store Category Info"
+    },
+    {
+      "channelName": "Member Count: (Loading...)",
+      "categoryID": "${tempVars(\"category-id\")}",
+      "bitrate": "",
+      "userLimit": "",
+      "storage": "2",
+      "varName": "server-user-channel",
+      "name": "Create Voice Channel"
+    },
+    {
+      "storage": "2",
+      "varName": "server-user-channel",
+      "name": "Save Variable"
+    }
+  ],
+  "_aliases": []
+}
