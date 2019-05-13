@@ -7,7 +7,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "Please react with what tag you want to view.\n*Only showing `bot-command` tags.*\n😄 - test1\n😆 - test2\n😊 - test3\n\nReactions will be checked in 5 seconds...",
+      "message": "Please react with what tag you want to view.\n😄 - test1\n😆 - test2\n😊 - test3\n\nReactions will be checked in 5 seconds...",
       "storage": "1",
       "varName2": "msg",
       "iffalse": "1",
