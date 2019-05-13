@@ -1,0 +1,23 @@
+{
+  "name": "update-members",
+  "temp": "30",
+  "event-type": "3",
+  "_id": "CHDey",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "36",
+      "storage": "1",
+      "varName2": "members",
+      "name": "Store Server Info"
+    },
+    {
+      "storage": "4",
+      "varName": "server-user-channel",
+      "toChange": "0",
+      "newState": "Member Count: ${tempVars(\"members\")}",
+      "name": "Edit Channel"
+    }
+  ]
+}
