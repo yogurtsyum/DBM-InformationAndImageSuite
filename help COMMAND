@@ -1,0 +1,171 @@
+{
+  "name": "help",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "VJnpk",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "How can I help connect you to our Staff Team?\n😄 - I have a question or need support.\n😆 - I have a moderation concern.\n😊 - I would like to submit a suggestion or share feedback.\n\nReactions will be checked in 5 seconds...",
+      "storage": "1",
+      "varName2": "msg",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "😄",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "😆",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "emoji": "4",
+      "varName2": "😊",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "1",
+      "find": "😄",
+      "storage": "1",
+      "varName2": "emoji1",
+      "name": "Find Reaction"
+    },
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "1",
+      "find": "😆",
+      "storage": "1",
+      "varName2": "emoji2",
+      "name": "Find Reaction"
+    },
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "1",
+      "find": "😊",
+      "storage": "1",
+      "varName2": "emoji3",
+      "name": "Find Reaction"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "reaction": "1",
+      "varName2": "emoji1",
+      "iftrue": "2",
+      "iftrueVal": "15",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "reaction": "1",
+      "varName2": "emoji2",
+      "iftrue": "2",
+      "iftrueVal": "18",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "reaction": "1",
+      "varName2": "emoji3",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Clear reactions from message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "Please react quicker next time!",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Clear reactions from message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "In this case, ask for support in our support channel.",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Clear reactions from message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "In this case, you have permission to tag the \"DO NOT TAG | Staff\" role.",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Clear reactions from message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "For this, you can post it in our feedback channel.",
+      "storage2": "1",
+      "varName2": "",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
